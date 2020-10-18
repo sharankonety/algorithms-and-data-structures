@@ -9,6 +9,5 @@ for i in range(n):
         current_sum += list[j]
         if current_sum==actual_sum:
             print(i,j)
-            break
         if current_sum > actual_sum:
             break
