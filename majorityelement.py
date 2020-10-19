@@ -3,7 +3,10 @@ list = [3,1,3,3,2]
 n = len(list)
 num = -1
 for i in list:
-    frequency = list.count(i)
-    if(frequency > n//2):
+    count = 0
+    for j in list:
+        if (i == j):
+            count += 1
+    if(count > n//2):
         num = i
 print(num)
