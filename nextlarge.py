@@ -1,7 +1,7 @@
 # input: [1,3,2,4]
 #output: check if there is next larger element if yes print it, if no such element print -1.
 
-list = [9]
+list = [1,3,2,4]
 n = len(list) 
 for i in range(n):
   next_large = -1

@@ -9,3 +9,4 @@ for i in range(n):
   if is_leader == True :
     print(list[i]) 
       
+      
