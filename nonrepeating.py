@@ -10,3 +10,4 @@ for char in string:
         break
 print(output)
 
+
