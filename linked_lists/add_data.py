@@ -1,4 +1,4 @@
-# addition of elements in a linkes list
+# addition of elements in a linked list
 class Node:
     def __init__(self,data=None,next=None):
         self.data = data

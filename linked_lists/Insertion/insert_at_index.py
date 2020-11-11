@@ -19,6 +19,7 @@ class Linked_list:
             x = x.next
         return count
     # Function to insert a node at specific index
+    # The same function can also be used for inserting a new_node in an empty list.
     def insert_at_index(self,index,data):
         #  access the variable count from the count_list function. to check if the given index is valid or not
         count = self.list_count()
