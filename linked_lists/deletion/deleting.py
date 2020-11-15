@@ -35,9 +35,9 @@ class Linked_list:
 list = Linked_list()
 list.head = Node(5)
 e2 = Node(6)
-e3 = Node(8)
+e3 = Node(6)
 list.head.next = e2
 e2.next = e3
 list.Print_list()
-list.delete_node(6)
+list.delete_node(5)
 list.Print_list()
