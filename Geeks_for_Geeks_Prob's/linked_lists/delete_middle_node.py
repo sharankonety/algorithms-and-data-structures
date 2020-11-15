@@ -1,3 +1,4 @@
+# progrom to delete the middle node
 class Node:
     def __init__(self,data=None):
         self.data=data
