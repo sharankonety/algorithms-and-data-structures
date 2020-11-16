@@ -1,4 +1,4 @@
-# program to count the number of nodes in the linked list
+# program to insert in a new node in a sorted linked list
 class Node:
     def __init__(self,data=None):
         self.data = data
@@ -6,13 +6,6 @@ class Node:
 class Linked_list:
     def __init__(self):
         self.head = None
-    def count_list(self):
-        count = 0
-        temp = self.head
-        while temp:
-            count += 1
-            temp = temp.next
-        print(count)
     def display(self):
         print_val = self.head
         while print_val:
@@ -28,11 +21,28 @@ class Linked_list:
         while temp.next:
             temp = temp.next
         temp.next = new_node
+    def insert_in_sort(self,key):
+        new_node = Node(key)
+        temp = self.head
+        q = None
+        if temp is None:
+            self.head = new_node
+        else:
+            while temp and temp.data <= key:
+                q = temp
+                temp = temp.next
+            if temp == self.head:
+                self.head = new_node
+                new_node.next = temp
+            else:
+                new_node.next = q.next
+                q.next = new_node
 list = Linked_list()
-list.add_data(1)
-list.add_data(2)
-list.add_data(3)
 list.add_data(4)
-list.add_data(5)
+list.add_data(6)
+list.add_data(8)
+list.add_data(9)
 list.display()
-list.count_list()
+# list.insert_in_sort(11)
+list.insert_in_sort(1)
+list.display()
