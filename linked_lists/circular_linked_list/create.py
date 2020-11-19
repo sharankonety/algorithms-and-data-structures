@@ -5,20 +5,28 @@ class Node:
 class Circular_linked_list:
     def __init__(self):
         self.head = None
-    def display(self):
-        print_val = self.head
+        self.last = None
+    def insert(self,new_data):
+        if self.head == None:
+            new_node = Node(new_data)
+            self.head = new_node
+            self.last = new_node
+            new_node.next = new_node
+            return
+        new_node = Node(new_data)
+        new_node.next = self.head
+        self.last.next = new_node
+        self.last = new_node
+def display(head):
+    print_val = head
+    print(print_val.data,end="-->")
+    print_val = print_val.next
+    while print_val != head:
         print(print_val.data,end="-->")
         print_val = print_val.next
-        while print_val != None:
-            print(print_val.data,end="-->")
-            print_val = print_val.next
 a = Circular_linked_list()
-a.head = Node(1)
-e2 = Node(2)
-e3 = Node(3)
-e4 = Node(4)
-a.head.next = e2
-e2.next = e3
-e3.next = e4
-e4.next = a.head
-a.display()
+a_nodes = [1,2,3,4,5]
+for x in a_nodes:
+    a.insert(x)
+display(a.head)
+
