@@ -25,5 +25,5 @@ list = linked_list()
 list.head_val = Node("Konety")
 e2 = Node("Sharan")
 list.head_val.next_val = e2
-list.in_between(e2,"Sai")
+list.in_between(list.head_val,"Sai")
 list.print_list()
