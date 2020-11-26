@@ -1,4 +1,4 @@
-# insert at particular position in a doubly linked list
+# insert at particular position using the previous node in a doubly linked list
 class Node:
     def __init__(self,data=None):
         self.pre = None
