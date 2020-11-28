@@ -1,21 +1,20 @@
-# Program to implement a stack
-stack = []
-n = 5
-def push(item):
-    if len(stack) >= n:
-        print("stack overflow")
-        return
-    else:
-        stack.append(item)
-def pop():
-    if len(stack)<=0:
-        print("Stack underflow")
-    else:
-        stack.pop()
-a = [1,2,3,4,5,6,7]
-for x in a:
-    push(x)
-print(stack)
-pop()
-print(stack)
-
+# program to implement a stack using array
+class Stack:
+    def __init__(self):
+        self.stack = []
+    def push(self,data):
+        self.stack.append(data)
+    def pop(self):
+        self.stack.pop()
+    def top(self):
+        return self.stack[-1]
+    def display(self):
+        print(self.stack)
+a = Stack()
+a.push(1)
+a.push(2)
+a.push(3)
+a.display()
+print(a.top())
+a.pop()
+a.display()
