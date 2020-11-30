@@ -5,7 +5,10 @@ class Stack:
     def push(self,data):
         self.stack.append(data)
     def pop(self):
-        self.stack.pop()
+        if len(self.stack)<=0:
+            print("stack undeflow")
+        else:
+            self.stack.pop()
     def top(self):
         return self.stack[-1]
     def display(self):
@@ -16,5 +19,8 @@ a.push(2)
 a.push(3)
 a.display()
 print(a.top())
+a.pop()
+a.pop()
+a.pop()
 a.pop()
 a.display()
