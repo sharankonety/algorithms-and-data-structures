@@ -17,6 +17,7 @@ class Circular_linked_list:
         new_node.next = self.head
         self.last.next = new_node
         self.last = new_node
+
 def display(head):
     print_val = head
     print(print_val.data,end="-->")
