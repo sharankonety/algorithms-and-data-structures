@@ -1,4 +1,4 @@
-# program to insert nodes into a Binary search Tree and traverse the whole tree in inorder and print the nodes.
+# Program to treaverse through the tree using all three traversals.
 class Node:
     def __init__(self,data):
         self.data = data
@@ -18,12 +18,24 @@ class Node:
                     self.right.insert(data)
         else:
             self.data = data
-    def PrintTree(self):
+    def preorder(self):
+        print(self.data,end=" ")
         if self.left:
-            self.left.PrintTree()
-        print(self.data)
+            self.left.preorder()
         if self.right:
-            self.right.PrintTree()
+            self.right.preorder()
+    def inorder(self):
+        if self.left:
+            self.left.inorder()
+        print(self.data,end=" ")
+        if self.right:
+            self.right.inorder()
+    def postorder(self):
+        if self.left:
+            self.left.postorder()
+        if self.right:
+            self.right.postorder()
+        print(self.data,end=" ")
 root = Node(9)
 root.insert(19)
 root.insert(15)
@@ -33,4 +45,8 @@ root.insert(13)
 root.insert(16)
 root.insert(4)
 root.insert(20)
-root.PrintTree()
+root.preorder()
+print("")
+root.inorder()
+print("")
+root.postorder()
